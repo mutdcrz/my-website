@@ -1,0 +1,440 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4; /* Light na color ng background */
+    color: #333; /* Dark na color ng text */
+    padding-bottom: 50px; /*space para sa footer */
+}
+
+/* Navigation Bar */
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: #2c3e50; /* Dark na color ng background */
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    height: 80px;
+    padding: 0 20px; /* Dagdag space para sa mas magandang layout */
+}
+
+.nav-text {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo Styling */
+.logo {
+    height: 150px; 
+    width: auto; 
+    margin-top: 5px; 
+    margin-left: 15px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #2c3e50; /* Dark na color na background */
+    margin: 0;
+}
+
+nav ul li {
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #1abc9c; /* Green color kapag naka-hover */
+    color: white;
+    border-radius: 10px;
+}
+
+/* Sections */
+section {
+    padding: 80px 20px;
+    min-height: 100vh;
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* Home Section */
+#home {
+    background: url('https://wallpaper.forfun.com/fetch/3a/3a69b6e3a37a065dd8d76643277ab38c.jpeg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#home .home-content {
+    text-align: center;
+}
+
+#home .home-content h1 {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+#home .home-content h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+#home .home-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #1abc9c; /* Green color ng button */
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+#home .home-button:hover {
+    background-color: #16a085; /* Mas dark na green kapag naka-hover */
+    transform: translateY(-5px);
+}
+
+/* About Section */
+#about {
+    background-color: #34495e; /* Dark color ng background */
+    color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 50px 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.about-content img {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about-content div {
+    width: 50%;
+    text-align: left;
+}
+
+.about-content div h3 {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.about-content div p {
+    font-size: 1.2em;
+    color: #ddd;
+    line-height: 1.6;
+    background-color: rgba(26, 188, 156, 0.5);
+    border-radius: 10px;
+}
+
+/* Characters Section */
+#characters {
+    background-color: #2c3e50; /* Dark color ng background */
+    padding: 40px 20px;
+    text-align: center;
+    margin: 0;
+    padding-top: 100px;
+    color: whitesmoke;
+}
+
+.characters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.characters-column {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    margin: 0;
+    background-color: rgba(26, 188, 156, 0.5);
+    border-radius: 20px;
+    color: whitesmoke;
+}
+
+.characters-column h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.characters-item {
+    margin-bottom: 5px;
+}
+
+.characters-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.characters-item p {
+    font-size: 1em;
+    color: whitesmoke;
+}
+
+.characters-item img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Favorites Section */
+#favorites {
+    text-align: center;
+    margin-top: 20px;
+    background-color: #34495e; /* Dark color ng background */
+    color: whitesmoke;
+}
+.download-button {
+    display: inline-block;
+    padding: 10px 100px;
+    background-color: #0073e6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.download-button:hover {
+    background-color: #005bb5;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dalawang column */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.video-item {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 na aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.video-item video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Contact Section */
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2c3e50; /* Dark color ng background */
+    color: whitesmoke;
+    padding: 4rem 2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+    background-color: rgba(26, 188, 156, 0.5); /* Medyo transparent na background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-right: 50px;
+    color: white;
+}
+
+.form1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1abc9c; /* Green color ng button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #16a085; /* Mas dark na green kapag naka-hover */
+}
+
+#submit {
+    padding: 12px 20px;
+    background-color: #1abc9c; /* Green color ng button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#submit:hover {
+    background-color: #16a085; /* Mas dark na green kapag naka-hover */
+}
+
+.map {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+    background-color: rgba(26, 188, 156, 0.5); /* Medyo transparent na background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-right: 50px;
+    height: 500px;
+    color: white;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Footer Styles */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 20px; /* Space between logo and content */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Logo */
+.footer-logo img {
+    width: 200px; /* Adjust logo size */
+    height: 100px; /* Maintain aspect ratio */
+    margin-top: 10px; /* Adjust margin as needed */
+	margin-left:160px;
+}
+
+/* Content */
+.footer-content {
+    text-align: center; /* Align text to the left */
+}
+
+.footer-content h2 {
+    font-size: 1.2em;
+    color: #1abc9c; /* Green color for heading */
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 50px; /* Space between icons */
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: Aliceblue; /* Hover color */
+}
+
+/* Email Link */
+.footer-content p {
+    font-size: 0.9em;
+    margin: 10px;
+    color: #ddd;
+}
+
+.footer-content a {
+    color: #1abc9c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+    color: aliceblue; /* Darker green on hover */
+}
